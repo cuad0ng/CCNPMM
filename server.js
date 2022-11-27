@@ -6,7 +6,7 @@ const router = require("./router");
 const accountRouter = require("./router/account");
 const accountModel = require("./models/account");
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use("/public", express.static(path.join(__dirname, "/public")));
