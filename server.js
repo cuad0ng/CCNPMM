@@ -53,7 +53,8 @@ app.post("/login", (req, res, next) => {
 app.use("/api/account/", accountRouter);
 
 app.get("/", (req, res) => {
-  const filePath = path.join(__dirname, "home/");
+  const filePath = path.join(__dirname, "./public/index.html");
+  res.sendFile(filePath);
 });
 // app.use("/admin/api/v1/", router);
 
